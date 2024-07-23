@@ -4,7 +4,7 @@ public class StringDemo {
 
 	public static void main(String...args) {
 		String s = "Hello";
-		String v = "And Welcome";
+		String v = "and Welcome";
 				
 		String n = s.concat(" "+v);
 		

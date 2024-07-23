@@ -12,7 +12,7 @@ public class MainGarbageCollectorFinalize {
 		
 		ob1 = null; //way to collect the garbage
 		
-		System.gc();
+		System.gc();//gc() is method to call garbage collector implicitly.
 	}
 	
 }
