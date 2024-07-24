@@ -15,7 +15,6 @@ public class DecimalToBinaryAndBinaryToDecimal {
 			//we have to concat the string in reverse order, so 
 			binary = rem + binary;
 		}
-		
 		return binary;
 	}
 	
