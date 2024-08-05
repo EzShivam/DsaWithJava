@@ -12,7 +12,7 @@ public class offMasking {
 		
 		//in order to make the i th bit we have to first perform the 1<<i th 
 		//time and then have to negate the value
-		int OnMasking = ~(1<<5);
+		int OnMasking = ~(1<<i);
 		
 		//now we can perform the AND operation
 		int res = n & OnMasking;

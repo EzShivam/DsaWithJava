@@ -8,7 +8,7 @@ public class toggleMasking {
 	
 	int i = 4;
 	
-	int toggleMasking = 1<<4;
+	int toggleMasking = 1<<i;
 	
 	int res = n ^ toggleMasking;
 	
