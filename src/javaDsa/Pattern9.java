@@ -1,33 +1,33 @@
 package javaDsa;
 
-import java.util.Scanner;
-
 public class Pattern9 {
-	//relation         i        j        number 
-	//01               1        1val      1
-	//02 03            2        2val      2 3
-	//04 05 06         3        3val      4 5 6
-	//07 08 09 10      4        4val      7 8 9 10
-	//11 12 13 14 15   5        5val
-	
+
+	//1            if we arrange this pattern in a matrix then we can 
+	//0 1          see that if we add the cell numbers(i+j) and if the sum of
+	//1 0 1        cell number is even then the output is 1 else 0.
+	//0 1 0 1 
+	//1 0 1 0 1
+
 	public static void main(String...strings) {
-		int number = 1;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the value of row: ");
-		int row = sc.nextInt();
-		
-		//outer for for rows
+		pattern9(5);
+	}
+	
+	static void pattern9(int row) {
+		//outer loop for rows
 		for(int i=1;i<=row;i++) {
+			//inner loop for cols
 			for(int j=1;j<=i;j++) {
-				if(number<10) {
-					System.out.print("0"+number+" ");
-					number++;
-				}else {
-					System.out.print(number+" ");
-					number++;
+				//for even
+				if((i+j)%2==0) {
+				System.out.print(1+" ");
+				}
+				//for odd
+				else {
+					System.out.print(0+" ");
 				}
 			}
 			System.out.println();
 		}
 	}
+	
 }

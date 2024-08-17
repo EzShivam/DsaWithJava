@@ -1,30 +1,38 @@
 package javaDsa;
 
-import java.util.Scanner;
-
 public class Pattern8 {
-    //n=5               i      j
-	//1 2 3 4 5         1     1-n      
-	//1 2 3 4           2     1-(n-1)  
-	//1 2 3             3     1-(n-2)
-	//1 2               4     1-(n-3)
-	//1                 5     1-(n-4)
+	                         //j
+	//01               i=1   1
+	//02 03            i=2   2-3
+	//04 05 06 		   i=3   4-6 
+	//07 08 09 10      i=4   7-10
+	//11 12 13 14 15   i=5   11-15
+	
+	//here we are not printing the values of j but we are printing one
+	//number which is starting from 1 and increases with each iteration.
 	
 	public static void main(String...strings) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a row value: ");
-		int row = sc.nextInt();
-		for(int i=1;i<=row;i++) {
-			for(int j=1;j<=row-i+1 ;j++) {
-				if(j<10) {
-					System.out.print("0"+j+" ");
-				}else {
-					System.out.print(j+" ");
+		pattern8(5);
+	}
+	
+	static void pattern8(int row) {
+		int n=1;
+		//outer for loop for the rows
+		for(int i=1; i<=row; i++) {
+			//inner for loop for printing the values
+			for(int j=1;j<=i;j++) {
+				//to attach a 0 in front of single digit numbers.
+				if(n<10) {
+				System.out.print("0"+n+" ");
+				n++;
 				}
-				
+				else {
+					System.out.print(n+" ");
+					n++;
+				}
 			}
 			System.out.println();
 		}
-		
 	}
+
 }

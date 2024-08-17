@@ -7,13 +7,13 @@ public class Pattern6 {
 	//  * * *  1-spaces 3-star
 	//* * * *  0-space  4-star
 	public static void main(String...strings) {
-		int n=4; //no of rows
+		int n=5; //no of rows
 		
 		//outer for - for next line
 		for(int i=1;i<=n;i++) {
 			
 			//inner for-spaces
-			for(int j=1;j<=n-i;j++) {
+			for(int j=1;j<=n-i;j++) {//
 				System.out.print(" ");
 			}
 			
